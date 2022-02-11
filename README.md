@@ -1,7 +1,7 @@
 # streaming-page-front
 Portal para plataforma de streaming
 
-Al descargar el proyecto, hay que abrir un cmd y posicionarnos sobre la raíz del proyecto y escribir lo siguiente -hay que tener node instalado-:
+Al clonar el proyecto cambiarse al brach de dev, hay que abrir un cmd y posicionarnos sobre la raíz del proyecto y escribir lo siguiente -hay que tener node instalado-:
 
 - npm install
 - ng serve
