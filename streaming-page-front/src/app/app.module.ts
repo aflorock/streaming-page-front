@@ -9,6 +9,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDnAAN6_N0Rb6jmlLq45_XXqtFO0xTDufo",
@@ -33,9 +35,14 @@ const firebaseConfig = {
     ReactiveFormsModule,
     AuthModule.forRoot({
       ...env.auth,
-    })
+    }),
+    NoopAnimationsModule,
+    MatTableModule,
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    MatTableModule,]
 })
 export class AppModule { }
