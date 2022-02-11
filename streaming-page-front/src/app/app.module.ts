@@ -6,6 +6,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AuthModule } from '@auth0/auth0-angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDnAAN6_N0Rb6jmlLq45_XXqtFO0xTDufo",
+  authDomain: "stream-api-6fe52.firebaseapp.com",
+  projectId: "stream-api-6fe52",
+  storageBucket: "stream-api-6fe52.appspot.com",
+  messagingSenderId: "979208228461",
+  appId: "1:979208228461:web:8c65140f8f4fa0cd273964"
+};
 
 @NgModule({
   declarations: [
@@ -16,9 +26,11 @@ import { AuthModule } from '@auth0/auth0-angular';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     AuthModule.forRoot({
       ...env.auth,
-    }),
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,27 @@
 <section class="login-clean">
-    <form method="post">
-        <h2 class="visually-hidden">Login Form</h2>
+    <form [formGroup]="loginForm" (submit)="login()">
+        <h2>Login</h2>
         <div class="illustration"><i class="icon ion-ios-navigate"></i></div>
-        <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-        <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+        <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"
+                formControlName="email" [(ngModel)]="email"></div>
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback d-block mb-3"
+            style="text-align: center;margin-top: -10px;">
+            <div *ngIf="f.email.errors.required">Campo requerido</div>
+        </div>
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback d-block mb-3"
+            style="text-align: center;margin-top: -10px;">
+            <div *ngIf="f.email.errors?.email || f.email.errors?.pattern">Formato de correo inválido</div>
+        </div>
+        <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"
+                formControlName="password" [(ngModel)]="password"></div>
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback d-block mb-3"
+            style="text-align: center;margin-top: -10px;">
+            <div *ngIf="f.password.errors.required">Campo requerido</div>
+        </div>
+        <div *ngIf="submitted" class="invalid-feedback d-block mb-3"
+            style="text-align: center;margin-top: -10px;">
+            <div *ngIf="credencialesError">Email o contraseña incorrecta</div>
+        </div>
         <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Log In</button></div>
     </form>
 </section>
