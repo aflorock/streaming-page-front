@@ -2,7 +2,7 @@ table{
   width: 100%;
  }
 
-.mat-column-descripcion {
+.mat-column-description {
   word-wrap: break-word !important;
   white-space: unset !important;
   flex: 0 0 20% !important;
@@ -18,7 +18,7 @@ table{
   hyphens: auto;
 }
 
-.mat-column-nombre {
+.mat-column-title {
   word-wrap: break-word !important;
   white-space: unset !important;
   flex: 0 0 20% !important;
@@ -34,7 +34,7 @@ table{
   hyphens: auto;
 }
 
-.mat-column-tipo {
+.mat-column-programType {
   text-align: center;
   word-wrap: break-word !important;
   white-space: unset !important;
@@ -51,7 +51,7 @@ table{
   hyphens: auto;
 }
 
-.mat-column-ano {
+.mat-column-releaseYear {
   word-wrap: break-word !important;
   white-space: unset !important;
   flex: 0 0 20% !important;
@@ -65,6 +65,10 @@ table{
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+}
+
+.filtro {
+  margin-left: 35px;
 }
 
 body {

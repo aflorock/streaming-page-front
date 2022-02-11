@@ -9,8 +9,12 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatPaginatorModule } from '@angular/material/paginator';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDnAAN6_N0Rb6jmlLq45_XXqtFO0xTDufo",
@@ -38,11 +42,21 @@ const firebaseConfig = {
     }),
     NoopAnimationsModule,
     MatTableModule,
+    MatSortModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule 
     
   ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [
-    MatTableModule,]
+    MatTableModule,
+    MatSortModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule ]
 })
 export class AppModule { }
