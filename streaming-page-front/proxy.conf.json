@@ -1,0 +1,7 @@
+{
+    "/api": {
+        "target": "https://assets-aivo.s3.amazonaws.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

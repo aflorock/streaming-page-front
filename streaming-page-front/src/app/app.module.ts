@@ -1,3 +1,4 @@
+import { MoviesService } from './services/movies.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment as env } from '../environments/environment';
@@ -7,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDnAAN6_N0Rb6jmlLq45_XXqtFO0xTDufo",
@@ -27,6 +29,7 @@ const firebaseConfig = {
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     AuthModule.forRoot({
       ...env.auth,

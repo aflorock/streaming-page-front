@@ -5,6 +5,7 @@ import { domain, clientId } from '../../auth_config.json';
 
 export const environment = {
   production: false,
+  API_URL: 'https://assets-aivo.s3.amazonaws.com/movies.json',
   auth: {
     domain,
     clientId,
